@@ -10,7 +10,7 @@ header {
   /* grid layout */
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 3fr 1fr;
+  grid-template-rows: 3fr 1fr 1fr;
   align-items: center;
   justify-items: center;
   /* visual design */
@@ -68,7 +68,7 @@ main {
 body {
   width: 80%;
   margin: 3rem auto;
-  background-image: url(../img/mainbg8.jpg);
+  background-image: url(../img/mainbg9.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -76,7 +76,7 @@ body {
 
   @media only screen and (max-width: 767px) {
   body {
-    background-image: url(../img/mainbg8.jpg);
+    background-image: url(../img/mainbg9.jpg);
   }
   }
 }
@@ -90,11 +90,20 @@ body {
   font-family: 'Barlow Condensed', sans-serif;
 }
 
+@media only screen and (max-width: 767px) {
+  .display {
+  padding: 2rem 5%;
+  font-size: 2.5em;
+  }
+  }
 
-header p {
+
+.message {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 50px;
   color: #fff;
+  grid-row: 3;
+  margin: 0;
 }
 
 
@@ -104,3 +113,11 @@ header p {
   grid-column: 1 / span 1;
   grid-row: 1 / span 1;
 }
+
+ @media only screen and (max-width: 767px) {
+  .logo {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  }
+  }

@@ -1,17 +1,17 @@
-$('header').click(function(){
-  $(this).removeClass('slideDown').addClass('slideUp');
+$('.message').click(function(){
+  $('header').removeClass('slideDown').addClass('slideUp');
 })
 
-$('main').click(function(){
-  $('header').removeClass('slideUp').addClass('slideDown');
-})
+// $().click(function(){
+//   $('header').removeClass('slideUp').addClass('slideDown');
+// })
 
 
 
 
 // sample array
 var arr = ['keep your cah dry today','Mark Walberg doesnt miss his weathah','F@#$ the Yankees',
-           'dont forget your soxs','run like f@$%in Revere','shippin off to BOSTON!'];
+           'dont forget your soxs','run like f@$%in Revere','shippin off to BOSTON!','use yah BLINKAH'];
 
 function getRandom(){
   // get random number based on length of array
@@ -90,47 +90,35 @@ $.getJSON('https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/
 
 function displayData(forecast){
 
-	// Target an element in your interface and display
-	// dynamic weather information inside of it
-
-	// All of the data you need is located in the "Console" tab
-	// when you inspect th code in the browser
-	// Click the arrow next to the "Object" to drill down into the data
-	// You can reference these data points in your code using the following
-	// method(s).
-
-	// For example, if I have an element <div class="today"> in my main content area
-	// I can add data from the "Daily" array like this
-
-	// $('.day01 p').html(Math.round(forecast.daily.data[0].temperatureHigh));
-
-	// $('.day02 p').html(Math.round(forecast.daily.data[1].temperatureHigh));
-	// $('.day02 h3').html(displayDay(1));
-
-	// $('.day03 p').html(Math.round(forecast.daily.data[2].temperatureHigh));
-	// $('.day03 h3').html(displayDay(2));
-
-	// $('.day04 p').html(Math.round(forecast.daily.data[3].temperatureHigh));
-	// $('.day04 h3').html(displayDay(3));
-	
-	// In this example, the high temperature for the first day of the week
-	// (referenced by the number 0) is written as HTML inside the <div class="today"> element
-	// If I want to round this number up, I would modify the code like this
-
-	$('.day02').html(Math.round(forecast.daily.data[0].temperatureHigh));
-
 	$('.high').html(Math.round(forecast.daily.data[0].temperatureHigh));
-
-    $('.low').html(Math.round(forecast.daily.data[0].temperatureLow));
 
 	$('.icon').html(displayIcon(forecast.daily.data[0].icon));
 
-	// $('.day02').html(Math.round(forecast.daily.data[1].temperatureHigh));
+	$('.summary').html(forecast.daily.data[0].summary);
 
-	$('.day02').html(forecast.daily.data[0].summary);
+    $('.day1 p').html(Math.round(forecast.daily.data[1].temperatureHigh));
+	$('.day1 icon').html(forecast.daily.data[1].icon);
+	$('.day1 p').html(Math.round(forecast.daily.data[1].temperatureLow));
 
-	// $('.today').addClass(forecast.daily.data[0].icon);
+	$('.day2 p').html(Math.round(forecast.daily.data[2].temperatureHigh));
+	$('.day2 icon').html(forecast.daily.data[2].icon);
+	$('.day2 p').html(Math.round(forecast.daily.data[2].temperatureLow));
 
+	$('.day3 p').html(Math.round(forecast.daily.data[3].temperatureHigh));
+	$('.day3 icon').html(forecast.daily.data[3].icon);
+	$('.day3 p').html(Math.round(forecast.daily.data[3].temperatureLow));
+
+	$('.day4 p').html(Math.round(forecast.daily.data[4].temperatureHigh));
+	$('.day4 icon').html(forecast.daily.data[4].icon);
+	$('.day4 p').html(Math.round(forecast.daily.data[4].temperatureLow));
+
+	$('.day5 p').html(Math.round(forecast.daily.data[5].temperatureHigh));
+	$('.day5 icon').html(forecast.daily.data[5].icon);
+	$('.day5 p').html(Math.round(forecast.daily.data[5].temperatureLow));
+
+	$('.day6 p').html(Math.round(forecast.daily.data[6].temperatureHigh));
+	$('.day6 icon').html(forecast.daily.data[6].icon);
+	$('.day6 p').html(Math.round(forecast.daily.data[6].temperatureLow));
 }
 
 
@@ -243,3 +231,17 @@ function timeConverter(UNIX_timestamp){
   var time = hour + ':' + min ;
   return time;
 }
+
+
+
+$('main h1').click(function(){
+    // uncomment this line to close all overlays when a card is clicked
+    // $('.overlay-content').removeClass('show-content');
+  $('.overlay-content').toggleClass('show-content');
+});
+
+$('.overlay-content').click(function(){
+    // uncomment this line to close all overlays when a card is clicked
+    // $('.overlay-content').removeClass('show-content');
+  $(this).toggleClass('show-content');
+});

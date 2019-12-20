@@ -9,7 +9,7 @@ header {
   /* grid layout */
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 3fr 1fr;
+  grid-template-rows: 3fr 1fr 1fr;
   align-items: center;
   justify-items: center;
   /* visual design */
@@ -54,14 +54,14 @@ main {
 body {
   width: 80%;
   margin: 3rem auto;
-  background-image: url(../img/mainbg8.jpg);
+  background-image: url(../img/mainbg9.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed; }
   @media only screen and (max-width: 767px) {
     body body {
-      background-image: url(../img/mainbg8.jpg); } }
+      background-image: url(../img/mainbg9.jpg); } }
 
 .display {
   margin: 2rem 0 1.5rem;
@@ -71,10 +71,16 @@ body {
   border-radius: 5px;
   font-family: 'Barlow Condensed', sans-serif; }
 
-header p {
+@media only screen and (max-width: 767px) {
+  .display {
+    padding: 2rem 5%;
+    font-size: 2.5em; } }
+.message {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 50px;
-  color: #fff; }
+  color: #fff;
+  grid-row: 3;
+  margin: 0; }
 
 .logo {
   size: relative;
@@ -82,41 +88,151 @@ header p {
   grid-column: 1 / span 1;
   grid-row: 1 / span 1; }
 
+@media only screen and (max-width: 767px) {
+  .logo {
+    width: 100%;
+    max-width: 400px;
+    height: auto; } }
 main {
   display: grid;
-  grid-template-columns: 4fr 4fr 4fr;
-  grid-template-rows: 3fr 4fr;
-  column-gap: 4rem;
+  grid-template-columns: 3fr 5fr 3fr;
+  grid-template-rows: 2fr 2fr 2fr 2fr 2fr 2fr;
   align-items: center;
   justify-items: center;
   height: 100vh; }
+  @media only screen and (max-width: 767px) {
+    main {
+      display: grid;
+      grid-template-columns: 1fr 3fr 1fr;
+      grid-template-rows: 2fr 2fr 2fr 2fr 2fr 2fr;
+      align-items: center;
+      justify-items: center;
+      height: 100vh; } }
+  main .high {
+    font-family: 'Barlow Condensed', sans-serif;
+    margin-top: -4rem;
+    font-size: 8em;
+    grid-column: 2;
+    grid-row: 2; }
+    @media only screen and (max-width: 767px) {
+      main .high {
+        font-family: 'Barlow Condensed', sans-serif;
+        margin-top: -4rem;
+        font-size: 8em;
+        grid-column: 1 / span 3;
+        grid-row: 2; } }
 
 .icon {
-  grid-column: 1;
-  grid-row: 1; }
-
-main h1 {
   grid-column: 2;
-  grid-row: 1; }
+  grid-row: 1;
+  size: 325px; }
+  @media only screen and (max-width: 767px) {
+    .icon {
+      grid-column: 1 / span 3;
+      grid-row: 1;
+      size: 325px; } }
 
-.card {
+.summary {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2em;
+  grid-column: 2;
+  grid-row: 3; }
+  @media only screen and (max-width: 767px) {
+    .summary {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 2em;
+      grid-column: 1 / span 3;
+      grid-row: 3; } }
+
+.mascot {
+  grid-column: 2;
+  grid-row: 4; }
+  @media only screen and (max-width: 767px) {
+    .mascot {
+      grid-column: 1 / span 3;
+      grid-row: 4; } }
+
+.card2 {
   width: 100%;
-  height: 100%;
-  background-color: #fff .1;
-  overflow: hidden; }
-  .card h1 {
+  height: 100vh;
+  grid-column: 2;
+  grid-row: 6;
+  background-color: #fff .5;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  justify-items: center; }
+  .card2 h1 {
     font-family: 'Barlow Condensed', sans-serif;
+    text-align: center;
     margin: 0;
-    background-color: #5899e2;
-    height: 100%;
-    padding: 2rem;
-    transform: translateY(80%);
-    transition: all .4s; }
-    .card h1:hover {
-      transform: translateY(0%); }
+    padding: 2rem; }
+
+.overlay-content {
+  font-family: 'Barlow Condensed', sans-serif;
+  position: fixed;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #5899e2;
+  padding: 2rem;
+  transform: translateY(100%);
+  transition: all .4s; }
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center; }
+  .inner .high {
+    grid-column: 1;
+    grid-row: 1; }
+  .inner .low {
+    grid-column: 3;
+    grid-row: 1;
+    align-self: end; }
+  .inner .icon {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+    display: grid; }
+    .inner .icon img {
+      align-self: center; }
+
+.show-content {
+  transform: translateY(0); }
 
 /* GENERAL STYLE AND GRID */
 * {
   box-sizing: border-box; }
+
+@media only screen and (max-width: 767px) {
+  .card2 {
+    width: 100%;
+    height: 100vh;
+    grid-column: 1 / span 3;
+    grid-row: 6;
+    background-color: #fff .5;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    justify-items: center; }
+    .card2 h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 2rem; } }
+.show-content {
+  transform: translateY(0); }
+
+@media only screen and (max-width: 767px) {
+  * {
+    box-sizing: border-box; } }
 
 /*# sourceMappingURL=main.css.map */
