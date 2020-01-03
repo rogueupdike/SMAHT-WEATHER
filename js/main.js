@@ -1,11 +1,22 @@
 $('.message').click(function(){
   $('header').removeClass('slideDown').addClass('slideUp');
+  $('aside').hide();
 })
 
-// $().click(function(){
-//   $('header').removeClass('slideUp').addClass('slideDown');
-// })
 
+$('aside h2').click(function(){
+  $('main').removeClass('slideUp').addClass('slideDown');
+})
+
+$('main h2').click(function(){
+  $('main').hide();
+  $('aside').show();
+})
+
+$('aside h2').click(function(){
+  $('main').show();
+  $('aside').hide();
+})
 
 
 
