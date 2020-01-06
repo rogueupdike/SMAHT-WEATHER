@@ -75,11 +75,13 @@ body {
       font-size: 2.5em; } }
 
 .message {
+  background-color: #011638;
+  border-radius: 5px;
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 50px;
   color: #fff;
   grid-row: 3;
-  margin: 0; }
+  margin-bottom: 2rem; }
 
 .logo {
   size: relative;
