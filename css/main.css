@@ -109,6 +109,22 @@ main {
       justify-items: center;
       height: 100vh; } }
 
+.godark {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: center;
+  align-self: center;
+  padding: .75rem 1.5rem;
+  font-family: 'Barlow Condensed', sans-serif;
+  text-decoration: none;
+  color: #212121;
+  background-color: #fff; }
+
+.dark {
+  background-image: url(../img/mainbg10.jpg); }
+  .dark h1, .dark h2, .dark p {
+    color: #fff; }
+
 h2 {
   color: #011638;
   font-family: 'Barlow Condensed', sans-serif;
@@ -116,7 +132,7 @@ h2 {
   grid-row: 1; }
 
 aside {
-  text-align: center;
+  text-align: justify;
   text-justify: center;
   color: #011638;
   font-family: 'Barlow Condensed', sans-serif;

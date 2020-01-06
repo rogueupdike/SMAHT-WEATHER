@@ -20,6 +20,26 @@ $('aside h2').click(function(){
 
 
 
+// var to keep track of dark or light status
+var dark = 0;
+
+$('.godark').click(function(){
+  // change text based on variable value
+  if( dark == 0 ){
+    $('.godark').text('Go Light');
+    dark = 1;
+  } else {
+    $('.godark').text('Go Dark');
+    dark = 0;
+  }
+  // alternate adding and remving class
+  $('body').toggleClass('dark');
+  
+})
+
+
+
+
 // sample array
 var arr = ['keep your cah dry today','Mark Walberg doesnt miss his weathah','F@#$ the Yankees',
            'dont forget your soxs','run like f@$%in Revere','shippin off to BOSTON!','use yah BLINKAH'];
