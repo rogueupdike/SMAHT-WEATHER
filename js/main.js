@@ -26,10 +26,10 @@ var dark = 0;
 $('.godark').click(function(){
   // change text based on variable value
   if( dark == 0 ){
-    $('.godark').text('GO LIGHT');
+    $('.godark').text('LIGHT');
     dark = 1;
   } else {
-    $('.godark').text('GO DARK');
+    $('.godark').text('DARK');
     dark = 0;
   }
   // alternate adding and remving class

@@ -125,16 +125,19 @@ main {
   align-self: center;
   padding: .75rem 1.5rem;
   font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.7em;
+  font-weight: bold;
   text-decoration: none;
-  color: #212121;
-  background-color: #fff;
+  color: #fff;
+  background-color: #011638;
   border-radius: 5px; }
   @media only screen and (max-width: 767px) {
     .godark {
-      margin-left: -1rem; } }
+      font-size: 1.2em; } }
 
 .dark {
-  background-image: url(../img/mainbg10.jpg); }
+  background-image: url(../img/mainbg10.jpg);
+  background-color: #fff; }
   .dark h1, .dark h2, .dark p {
     color: #fff; }
 
@@ -142,21 +145,25 @@ h2 {
   color: #011638;
   font-family: 'Barlow Condensed', sans-serif;
   grid-column: 1;
-  grid-row: 1; }
+  grid-row: 1;
+  border-radius: 5px;
+  padding: .75rem 1.5rem;
+  background-color: #5899e2; }
   @media only screen and (max-width: 767px) {
     h2 {
       margin-left: -5rem;
       font-size: 1rem; } }
 
 aside {
+  grid-column: 2;
   text-align: justify;
-  text-justify: center;
   color: #011638;
-  font-family: 'Barlow Condensed', sans-serif;
-  padding-left: 4rem;
-  padding-right: 4rem; }
+  font-family: 'Barlow Condensed', sans-serif; }
 
-aside h1 {
+@media only screen and (max-width: 767px) {
+  aside h2 {
+    margin-left: 0.01rem; } }
+aside p {
   color: #011638;
   font-family: 'Barlow Condensed', sans-serif; }
 
@@ -180,6 +187,8 @@ aside h1 {
   grid-row: 1; }
   @media only screen and (max-width: 767px) {
     .icon {
+      padding-top: 4rem;
+      margin-bottom: -2rem;
       margin-left: -5rem;
       grid-column: 1 / span 3;
       grid-row: 1; } }
@@ -189,8 +198,8 @@ aside h1 {
   width: 200px; }
   @media only screen and (max-width: 767px) {
     .icon img {
-      height: 200px;
-      width: 200px; } }
+      height: 160px;
+      width: 160px; } }
 
 .summary {
   color: #011638;
@@ -227,8 +236,8 @@ aside h1 {
   @media only screen and (max-width: 767px) {
     .mascot img {
       margin-left: -5rem;
-      width: 250px;
-      height: 250px;
+      width: 220px;
+      height: 220px;
       border-radius: 12rem; } }
 
 main h1 {
