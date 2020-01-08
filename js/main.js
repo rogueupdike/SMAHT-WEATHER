@@ -42,7 +42,8 @@ $('.godark').click(function(){
 
 // sample array
 var arr = ['keep your cah dry today','Mark Walberg doesnt miss his weathah','F@#$ the Yankees',
-           'dont forget your soxs','run like f@$%in Revere','shippin off to BOSTON!','use yah BLINKAH'];
+           'dont forget your soxs','run like f@$%in Revere','shippin off to BOSTON!','use yah BLINKAH',
+           'WIKED SMAHT','did yah get your Dunkin','Tom Brady kid!','is it munday?'];
 
 function getRandom(){
   // get random number based on length of array
