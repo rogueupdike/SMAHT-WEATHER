@@ -37,6 +37,9 @@ main {
 
 .dark {
   background-image: url(../img/mainbg10.jpg);
+  @media only screen and (max-width: 767px) {
+  background-image: url(../img/mainbg14.jpg);
+}
 .godark {
   background-color: #fff;
   color: #011638; 

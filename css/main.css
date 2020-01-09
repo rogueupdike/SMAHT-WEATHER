@@ -18,7 +18,7 @@ header {
   background-attachment: fixed; }
   @media only screen and (max-width: 767px) {
     header {
-      background-image: url(../img/headerbg3.jpg); } }
+      background-image: url(../img/headerbg5.jpg); } }
 
 h1 {
   color: #fff; }
@@ -60,7 +60,7 @@ body {
   background-attachment: fixed; }
   @media only screen and (max-width: 767px) {
     body {
-      background-image: url(../img/mainbg11.jpg); } }
+      background-image: url(../img/mainbg13.jpg); } }
 
 .display {
   margin: 0 1.5rem;
@@ -137,6 +137,9 @@ main {
 
 .dark {
   background-image: url(../img/mainbg10.jpg); }
+  @media only screen and (max-width: 767px) {
+    .dark {
+      background-image: url(../img/mainbg14.jpg); } }
   .dark .godark {
     background-color: #fff;
     color: #011638; }
