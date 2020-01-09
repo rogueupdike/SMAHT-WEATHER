@@ -311,7 +311,7 @@ main h1 {
     grid-row: 2; }
     @media only screen and (max-width: 767px) {
       .inner .day {
-        margin-left: -2.5rem;
+        margin-left: -6rem;
         margin-right: 0.5rem;
         font-size: 1em; } }
   .inner .high {
@@ -335,7 +335,7 @@ main h1 {
     align-self: center; }
     @media only screen and (max-width: 767px) {
       .inner .low {
-        margin-left: -3rem;
+        margin-left: -9.5rem;
         font-size: 1em; } }
   .inner .icon {
     grid-column: 2;
