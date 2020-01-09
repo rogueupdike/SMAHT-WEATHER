@@ -341,7 +341,8 @@ main h1 {
     grid-column: 2;
     grid-row: 1;
     align-self: center;
-    display: grid; }
+    display: grid;
+    width: 110px; }
     .inner .icon img {
       align-self: center; }
       @media only screen and (max-width: 767px) {
